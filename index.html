@@ -4,110 +4,289 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portafolio de Mariana</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts: Kiwi Maru -->
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+
+
   <style>
+    /* Tipografía desde Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+
+    /* Estilos generales del body */
     body {
-      background-color: #f8f9fa;
+      background-color: #F5F4FF;
+      color: #878398;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
-    header {
-      background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+    /* Encabezados (h1-h6) */
+    h1, h2, h3, h4, h5, h6 {
+      color: #2C2669;
+      font-family: 'Kiwi Maru', serif;
+    }
+
+    /* Tamaños sugeridos para un portafolio UX/UI */
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 1.75rem;
+      font-weight: 500;
+    }
+    h4 {
+      font-size: 1.5rem;
+    }
+    h5 {
+      font-size: 1.25rem;
+    }
+    h6 {
+      font-size: 1rem;
+    }
+
+    /* Párrafos y texto normal */
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
     }
     .hero {
-      padding: 60px 0;
-      text-align: center;
+      background-image: url('fondo.png');
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat;
+      min-height: 50vh; 
+      display: flex;
+      align-items: center;
     }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+    .bottom-nav {
+      margin-top: 2rem;
+      padding-bottom: 1.5rem;
     }
-    .section-title {
-      font-size: 1.75rem;
-      margin-top: 40px;
+
+    .bottom-nav .nav-link {
+      color: #878398;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      position: relative;
+      transition: color 0.3s ease;
     }
+
+    .bottom-nav .nav-link.active::after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 30%;
+      padding-top: 3px;
+      border-bottom: 2px solid #878398;
+    }
+
+    .bottom-nav .nav-link:hover {
+      color: #2C2669;
+    }
+
+    .bottom-nav .nav-link.active {
+      color: #2C2669;
+    }
+    
     footer {
-      background-color: #ffffff;
+      background-color: #878398;
       padding: 20px;
       text-align: center;
       font-size: 0.9rem;
-      color: #888;
-      margin-top: 60px;
+      color: #ffffff;
     }
+    .card{
+      border-radius: 10px;
+      border: none;
+      background: #ffffff;
+      color: #878398;
+      box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+      padding: 14px 80px 18px 36px;
+      cursor: pointer;
+    }
+
+    .card:hover{
+      transform: scale(1.05);
+      background: #878398;
+      color: #ffffff;
+      box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+    }
+
+    .btn-primary {
+      background-color: #4d2669;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #1f1a4d; /* Un tono más oscuro para el hover */
+      transform: scale(1.05);   /* Ligeramente más grande al hacer hover */
+    }
+
   </style>
+
 </head>
 <body>
 
-  <header class="py-3">
-    <div class="container d-flex justify-content-between align-items-center">
-      <h3 class="mb-0">Mariana</h3>
-      <nav>
-        <a href="#sobre" class="me-3">Sobre mí</a>
-        <a href="#cv" class="me-3">CV</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero bg-light">
-    <div class="container">
+  <section class="hero">
+    <div class="container text-center py-5">
       <h1>Hola, soy Mariana ✨</h1>
-      <p class="lead">Diseñadora UX/UI con formación en animación digital e informática, enfocada en crear interfaces accesibles, funcionales y visualmente atractivas. Me interesa comprender a fondo las necesidades de los usuarios para diseñar experiencias intuitivas y coherentes. Con una combinación de pensamiento creativo, empatía y habilidades técnicas, me adapto con facilidad a nuevos desafíos y equipos colaborativos.</p>
+      <p class="lead px-4 pt-3">Diseñadora UX/UI con formación en animación digital e informática, enfocada en crear interfaces accesibles, funcionales y visualmente atractivas. Me interesa comprender a fondo las necesidades de los usuarios para diseñar experiencias intuitivas y coherentes. Con una combinación de pensamiento creativo, empatía y habilidades técnicas, me adapto con facilidad a nuevos desafíos y equipos colaborativos.</p>
+      <section class="pt-5" id="software">
+        <div class="text-center row">
+          <div class="col-3"><img style="width: 4rem;" src="https://finevpn.org/wp-content/uploads/2024/02/figma-logo-logo.png" class="img-fluid" alt="Figma"></div>
+          <div class="col-3"><img style="width: 4rem;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg/1200px-Adobe_Creative_Cloud_rainbow_icon.svg.png" class="img-fluid" alt="Adobe Suite"></div>
+          <div class="col-3"><img style="width: 4rem;" src="https://images.seeklogo.com/logo-png/55/2/miro-logo-png_seeklogo-554515.png" class="img-fluid" alt="Miro"></div>
+          <div class="col-3"><img style="width: 4rem;" src="https://img.icons8.com/?size=512&id=65231&format=png" class="img-fluid" alt="Blender"></div>
+        </div>
+      </section>
     </div>
   </section>
 
-  <header class="py-3">
-    <div class="container d-flex align-items-center">
-      <nav>
-        <a href="#sobre" class="me-3">Inicio</a>
-        <a href="#cv" class="me-3">Sobre mí</a>
-        <a href="#contacto">CV</a>
-      </nav>
-    </div>
+  <header class="py-1">
+    <nav class="bottom-nav">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#inicio">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sobremi">Sobre mí</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#cv">CV</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="container" id="software">
-    <div class="grid text-center">
-      <div class="g-col-3"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" class="img-fluid" alt="Figma"></div>
-      <div class="g-col-3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg/1200px-Adobe_Creative_Cloud_rainbow_icon.svg.png" class="img-fluid" alt="Adobe Suite"></div>
-      <div class="g-col-3"><img src="https://images.seeklogo.com/logo-png/55/2/miro-logo-png_seeklogo-554515.png" class="img-fluid" alt="Miro"></div>
-      <div class="g-col-3"><img src="https://img.icons8.com/?size=512&id=65231&format=png" class="img-fluid" alt="Blender"></div>
-    </div>
-  </section>
 
   <section class="container" id="experiencia">
-    <h2 class="section-title">Experiencia diseñando salud pública digital</h2>
-    <p>Durante 4 años formé parte del equipo MIDAS, trabajando como única diseñadora en la digitalización de la Subsecretaría de Salud Pública. MIDAS es una plataforma modular usada por el Ministerio de Salud para gestionar trámites internos.</p>
+    <div class="row">
+      <div class="col-md-8">
+        <h3>Experiencia diseñando salud pública digital</h3>
+        <p>Durante un 4 años formé parte del equipo MIDAS (Modernización de la Información Digital de la Autoridad Sanitaria), trabajando como única diseñadora en el proceso de digitalización de la Subsecretaría de Salud Pública.
+        <br>
+        MIDAS es una plataforma modular utilizada por funcionarios/as del Ministerio de Salud para gestionar procesos internos según su rol dentro de la institución. Uno de sus módulos más relevantes es "Trámites", desde donde se gestionan las solicitudes ingresadas por la ciudadanía a través del portal Seremi en Línea.
+        <br>
+        A lo largo de este proyecto, participé en múltiples etapas del diseño de experiencia: desde la definición de flujos y rediseño de interfaces, hasta la creación de ilustraciones, manuales, material de difusión, video tutoriales y maquetación en HTML y CSS.</p>
+      </div>
+      <div class="col-md-4 d-flex justify-content-end">
+        <img src="experiencia.png" alt="Imagen de experiencia" class="img-fluid h-75">
+      </div>
 
-    <h4 class="mt-4">Desafíos Globales</h4>
-    <ul>
-      <li>Diseñar para perfiles muy diversos: ciudadanía sin experiencia digital hasta funcionarios con 20 años de experiencia presencial.</li>
-      <li>Unificar criterios visuales entre módulos desarrollados por distintos equipos.</li>
-      <li>Crear soluciones accesibles sin perder de vista las restricciones institucionales y técnicas.</li>
-    </ul>
+    </div>
+  </section>
 
-    <h4 class="mt-4">Algunas soluciones implementadas</h4>
+  <section class="container mt-5" id="desafios">
+    <h3 class="mt-4 text-center">Desafíos Globales</h3>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="h-100">
+          <img src="desafio1.png" class="card-img-top" alt="...">
+          <div class="card-body mt-3">
+            <h5 class="card-title">Diseñar para perfiles muy diversos:</h5>
+            <p class="card-text">Desde ciudadanía sin experiencia digital hasta funcionarios con 20 años de experiencia presencial.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="h-100">
+          <img src="desafio2.png" class="card-img-top" alt="...">
+          <div class="card-body mt-3">
+            <h5 class="card-title">Unificar Criterios</h5>
+            <p class="card-text">Visuales y de navegación entre módulos desarrollados por distintos equipos, utilizando el kit digital del Gobierno.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="h-100">
+          <img src="desafio3.png" class="card-img-top" alt="...">
+          <div class="card-body mt-3">
+            <h5 class="card-title">Accesibilidad</h5>
+            <p class="card-text">Crear soluciones accesibles sin perder de vista las restricciones institucionales y técnicas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <section class="container mt-5" id="soluciones">
+    <h3 class="mt-4 text-center">Algunas soluciones implementadas</h3>
+    <div class="row text-center ">
+      <div class="col-md-12 pt-4">
+        <a href="" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="seremienlinea.png" class="card-img-top mx-auto w-25" alt="">
+            <div class="card-body">
+              <h5>SEREMI en línea</h5>
+              <p class="card-text">Rediseño del portal de trámites ciudadanos.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 pt-4">
+        <a href="" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="seremienlinea.png" class="card-img-top mx-auto w-50" alt="">
+            <div class="card-body">
+              <h5>MIDAS</h5>
+              <p class="card-text">Rediseño de la interfaz de gestión para los funcionarios.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 pt-4">
+        <a href="" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="seremienlinea.png" class="card-img-top mx-auto w-50" alt="">
+            <div class="card-body">
+              <h5>Busca tu farmacia</h5>
+              <p class="card-text">Mejoras en la herramienta pública para la localización de farmacias de turno.</p>
+            </div>  
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>  
+
+  <section class="container my-5" id="competencias">
+    <h3 class="py-4">Mas competencias aplicadas</h3>
     <ul>
       <li>Ilustraciones para representar módulos del sistema.</li>
       <li>Video tutoriales paso a paso.</li>
       <li>Manuales y guías digitales para funcionarios/as.</li>
       <li>Flyers e instructivos para difusión interna.</li>
     </ul>
-  </section>
+  </section>  
 
-  <section class="container mt-5" id="cv">
-    <h2 class="section-title">Mi CV</h2>
-    <p>Puedes <a href="#">descargar mi CV aquí</a>.</p>
-  </section>
-
-  <section class="container mt-5" id="contacto">
-    <h2 class="section-title">Contáctame</h2>
-    <p>📧 <a href="mailto:mpasz@hotmail.cl">mpasz@hotmail.cl</a></p>
+  <section class="bg-white py-5" id="cv">
+    <div class="container text-center">
+      <h2 class="section-title">Contáctame</h2>
+      <p>📧 <a href="mailto:mpasz@hotmail.cl">mpasz@hotmail.cl</a></p>
+      <p>o descarga mi CV aquí</p>
+      <a href="#"><button type="button" class="btn btn-primary rounded-pill">Descargar</button></a>
+    </div>
   </section>
 
   <footer>
-    Hecho con ❤️ por Mariana · Basado en uxfol.io
+    Hecho con ❤️ por Mariana
   </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
